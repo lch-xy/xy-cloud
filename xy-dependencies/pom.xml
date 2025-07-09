@@ -18,6 +18,8 @@
         <!-- spring 相关 -->
         <spring-boot.version>3.4.5</spring-boot.version>
         <spring-cloud.version>2024.0.1</spring-cloud.version>
+        <mybatis-plus.version>3.5.12</mybatis-plus.version>
+        <lombok.version>1.18.38</lombok.version>
     </properties>
 
 
@@ -40,6 +42,21 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- DB 相关-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <!-- 工具类-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

@@ -1,16 +1,16 @@
-package org.xy.cloud;
+package org.xy.cloud.web.starter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
- * 服务网关
+ * 启动程序
  *
  * @author lch
  * @date 2025/7/4
  */
 @SpringBootApplication
-public class GatewayApplication {
+public class WebApplication {
     public static void main(String[] args) {
-        SpringApplication.run(GatewayApplication.class, args);
+        SpringApplication.run(WebApplication.class, args);
     }
 }
