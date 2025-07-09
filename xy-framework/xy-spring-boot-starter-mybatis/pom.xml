@@ -9,13 +9,18 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>xy-common</artifactId>
+    <artifactId>xy-spring-boot-starter-mybatis</artifactId>
     <packaging>jar</packaging>
     <name>${project.artifactId}</name>
 
-    <description>
-        公共类
-    </description>
+    <properties>
+    </properties>
 
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>com.mysql</groupId>-->
+<!--            <artifactId>mysql-connector-j</artifactId>-->
+<!--        </dependency>-->
+<!--    </dependencies>-->
 
 </project>

@@ -2,15 +2,16 @@ package org.xy.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
- * 系统核心沉痼
+ * 系统启动类
  *
  * @author lch
- * @date 2025/7/4
+ * @date 2025/7/8
  */
 @SpringBootApplication
-public class SystemApplication {
+public class SystemApplition {
     public static void main(String[] args) {
-        SpringApplication.run(SystemApplication.class, args);
+        SpringApplication.run(SystemApplition.class,args);
     }
 }

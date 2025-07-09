@@ -3,10 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>org.xy</groupId>
-    <artifactId>xy-cloud</artifactId>
-    <version>${pversion}</version>
+    <groupId>org.xy.cloud</groupId>
+    <artifactId>xy</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -18,32 +17,17 @@
     </modules>
 
     <properties>
-        <pversion>1.0.0-SNAPSHOT</pversion>
         <java.version>17</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-
-        <!-- spring 相关 -->
-        <spring-boot.version>3.4.5</spring-boot.version>
-        <spring-cloud.version>2024.0.1</spring-cloud.version>
     </properties>
 
-    <!-- type=pom : 引入的是POM文件，用于版本管理 -->
-    <!-- scope=import :  仅导入依赖配置，不实际引入依赖 -->
     <dependencyManagement>
         <dependencies>
-            <!-- Spring 相关 -->
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <groupId>org.xy.cloud</groupId>
+                <artifactId>xy-dependencies</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
