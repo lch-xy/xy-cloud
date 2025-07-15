@@ -14,7 +14,6 @@
         <module>xy-framework</module>
         <module>xy-web-starter</module>
         <module>xy-system</module>
-        <module>xy-framework/xy-spring-boot-starter-security</module>
     </modules>
 
     <properties>

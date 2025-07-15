@@ -16,6 +16,7 @@
     <modules>
         <module>xy-common</module>
         <module>xy-spring-boot-starter-mybatis</module>
+        <module>xy-code-generator</module>
     </modules>
 
     <description>

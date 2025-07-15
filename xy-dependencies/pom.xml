@@ -20,6 +20,7 @@
         <spring-cloud.version>2024.0.1</spring-cloud.version>
         <mybatis-plus.version>3.5.12</mybatis-plus.version>
         <lombok.version>1.18.38</lombok.version>
+        <springdoc.version>2.6.0</springdoc.version>
     </properties>
 
 
