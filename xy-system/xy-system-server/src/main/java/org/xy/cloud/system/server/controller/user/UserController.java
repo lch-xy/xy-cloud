@@ -14,7 +14,7 @@ import org.xy.cloud.system.server.service.user.UserService;
  */
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/system/user")
 public class UserController {
 
     @Resource
@@ -22,6 +22,7 @@ public class UserController {
 
     @GetMapping("/getUserInfoById")
     public User getUserInfoById(@RequestParam("id") Long id){
+        int i = 1 / 0;
         return userService.getUserInfoById(id);
     }
 }

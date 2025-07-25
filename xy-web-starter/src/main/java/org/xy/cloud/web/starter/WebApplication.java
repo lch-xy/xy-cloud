@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author lch
  * @date 2025/7/4
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={"org.xy.cloud"})
 public class WebApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebApplication.class, args);

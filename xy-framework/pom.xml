@@ -14,9 +14,11 @@
     <name>${project.artifactId}</name>
 
     <modules>
+        <module>xy-code-generator</module>
         <module>xy-common</module>
         <module>xy-spring-boot-starter-mybatis</module>
-        <module>xy-code-generator</module>
+        <module>xy-spring-boot-starter-security</module>
+        <module>xy-spring-boot-starter-web</module>
     </modules>
 
     <description>

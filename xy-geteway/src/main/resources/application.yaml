@@ -2,5 +2,14 @@ spring:
   application:
     name: gateway-server
 
+  cloud:
+    gateway:
+      routes:
+        - id: system-server
+          uri: lb://system-server
+          predicates:
+            - Path:/system/**
+
+
 server:
   port: 9090

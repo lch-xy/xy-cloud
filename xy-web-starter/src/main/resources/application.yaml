@@ -1,6 +1,15 @@
 spring:
   application:
-    name: system-server
+    name: cloud-server
+  datasource:
+    url: jdbc:mysql://60.204.237.239:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: mysqlTest@1234
+
 
 server:
   port: 9999
+
+logging:
+  level:
+    org.springframework.security: debug
