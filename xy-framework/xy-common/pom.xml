@@ -19,6 +19,12 @@
 
 
     <dependencies>
+        <!-- Spring 核心类 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <scope>provided</scope> <!-- 编译和测试阶段生效 -->
+        </dependency>
 
         <!-- 工具类 -->
         <dependency>
@@ -39,6 +45,11 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
         </dependency>
     </dependencies>
 

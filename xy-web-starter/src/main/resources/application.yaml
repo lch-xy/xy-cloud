@@ -13,3 +13,7 @@ server:
 logging:
   level:
     org.springframework.security: debug
+
+jwt:
+  secret: 5OfGky1sHcWT5EMZYGkGkHfIWq1hTFr5uBWuMiJQyww=  # 256-bit Base64
+  expiration: 3600000  # 1小时
