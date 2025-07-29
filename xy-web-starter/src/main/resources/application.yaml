@@ -1,11 +1,28 @@
 spring:
   application:
     name: cloud-server
-  datasource:
-    url: jdbc:mysql://60.204.237.239:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
-    username: root
-    password: mysqlTest@1234
+  profiles:
+    active: dev
 
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 60.204.237.239:8848
+        username: ${NACOS_USERNAME}
+        password: ${NACOS_PASSWORD}
+        namespace: 063701af-ad31-403f-bb51-934ddc05118b
+      config:
+        server-addr: 60.204.237.239:8848
+        username: ${NACOS_USERNAME}
+        password: ${NACOS_PASSWORD}
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace: 063701af-ad31-403f-bb51-934ddc05118b
+
+  config:
+    import:
+      - optional:classpath:application-${spring.profiles.active}.yaml # 加载本地配置
+      - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml # 加载nacos配置 下面的优先级高
 
 server:
   port: 9999
@@ -13,7 +30,4 @@ server:
 logging:
   level:
     org.springframework.security: debug
-
-jwt:
-  secret: 5OfGky1sHcWT5EMZYGkGkHfIWq1hTFr5uBWuMiJQyww=  # 256-bit Base64
-  expiration: 3600000  # 1小时
+    com.alibaba.nacos: debug

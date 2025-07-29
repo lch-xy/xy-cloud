@@ -8,7 +8,6 @@ import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,7 +22,7 @@ import org.xy.cloud.system.server.security.filter.JwtAuthenticationFilter;
  * @date 2025/7/9
  */
 @Configuration
-@EnableWebSecurity(debug = true)
+//@EnableWebSecurity(debug = true)
 public class SecurityConfig {
 
     @Resource
@@ -42,6 +41,7 @@ public class SecurityConfig {
                 .httpBasic(basic -> basic.disable()) // 禁用HTTP
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/system/auth/login").permitAll()
+                        .requestMatchers("/redisson/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .exceptionHandling(ex -> ex

@@ -14,6 +14,8 @@
         <module>xy-framework</module>
         <module>xy-web-starter</module>
         <module>xy-system</module>
+        <module>xy-internal-test</module>
+        <module>xy-infrastructure</module>
     </modules>
 
     <properties>

@@ -20,7 +20,17 @@
         <!-- 业务 相关 -->
         <dependency>
             <groupId>org.xy.cloud</groupId>
+            <artifactId>xy-infrastructure-server</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xy.cloud</groupId>
             <artifactId>xy-system-server</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.xy.cloud</groupId>
+            <artifactId>xy-internal-test</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
 <!--        <dependency>-->
@@ -35,6 +45,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>
