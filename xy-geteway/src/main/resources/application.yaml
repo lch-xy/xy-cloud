@@ -5,11 +5,24 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: system-server
-          uri: lb://system-server
+        - id: cloud-server
+          uri: lb://cloud-server
           predicates:
-            - Path:/system/**
-
+            - Path=/cloud-server/**
+          filters:
+            - StripPrefix=1
+    nacos:
+      discovery:
+        server-addr: 60.204.237.239:8848
+        username: ${NACOS_USERNAME}
+        password: ${NACOS_PASSWORD}
+        namespace: 063701af-ad31-403f-bb51-934ddc05118b
 
 server:
   port: 9090
+
+
+logging:
+  level:
+    org.springframework.cloud.alibaba.nacos: DEBUG
+    com.alibaba.nacos: DEBUG
