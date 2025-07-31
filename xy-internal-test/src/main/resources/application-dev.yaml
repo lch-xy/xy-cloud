@@ -1,0 +1,22 @@
+spring:
+  autoconfigure:
+    exclude: org.redisson.spring.starter.RedissonAutoConfigurationV2 # 禁用自带redisson配置
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+
+jwt:
+  secret: 5OfGky1sHcWT5EMZYGkGkHfIWq1hTFr5uBWuMiJQyww=  # 256-bit Base64
+  expiration: 3600000  # 1小时
+
+xy:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 15
+    timeout: 2000
+    lockWatchdogTimeout: 30000
+

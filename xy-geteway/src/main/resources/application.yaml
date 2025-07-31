@@ -11,6 +11,18 @@ spring:
             - Path=/cloud-server/**
           filters:
             - StripPrefix=1
+        - id: test-server
+          uri: lb://test-server
+          predicates:
+            - Path=/test-server/**
+          filters:
+            - StripPrefix=1
+        - id: system-server
+          uri: lb://system-server
+          predicates:
+            - Path=/system-server/**
+          filters:
+            - StripPrefix=1
     nacos:
       discovery:
         server-addr: 60.204.237.239:8848

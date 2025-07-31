@@ -1,21 +1,21 @@
-package org.xy.cloud.system.server;
+package org.xy.cloud;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * 系统启动类
+ * 测试服务
  *
  * @author lch
- * @date 2025/7/8
+ * @date 2025/7/31
  */
+@EnableFeignClients
 @EnableDiscoveryClient
 @SpringBootApplication(scanBasePackages={"org.xy.cloud"})
-public class SystemApplition {
-
+public class TestApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SystemApplition.class,args);
+        SpringApplication.run(TestApplication.class, args);
     }
-
 }
