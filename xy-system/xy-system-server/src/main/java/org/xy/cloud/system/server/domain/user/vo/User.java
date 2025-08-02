@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
+import java.time.LocalDateTime;
+
 /**
  * @author lch
  * @date 2025/7/9
@@ -24,4 +26,6 @@ public class User {
     private int age;
 
     private String post;
+
+    private LocalDateTime createTime;
 }

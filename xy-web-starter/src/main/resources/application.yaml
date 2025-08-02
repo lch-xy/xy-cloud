@@ -31,3 +31,5 @@ logging:
   level:
     org.springframework.security: debug
     com.alibaba.nacos: debug
+
+

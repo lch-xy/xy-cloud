@@ -1,0 +1,4 @@
+jwt:
+  secret:   # 256-bit Base64
+  expiration:   # 1小时
+

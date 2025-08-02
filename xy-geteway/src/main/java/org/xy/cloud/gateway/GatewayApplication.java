@@ -11,7 +11,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @date 2025/7/4
  */
 @EnableDiscoveryClient
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages={"org.xy.cloud"})
 public class GatewayApplication {
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);

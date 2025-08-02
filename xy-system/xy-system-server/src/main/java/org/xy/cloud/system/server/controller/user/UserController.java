@@ -22,7 +22,6 @@ public class UserController {
 
     @GetMapping("/getUserInfoById")
     public User getUserInfoById(@RequestParam("id") Long id){
-        int i = 1 / 0;
         return userService.getUserInfoById(id);
     }
 }

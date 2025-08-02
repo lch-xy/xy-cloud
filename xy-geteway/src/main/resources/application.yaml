@@ -2,6 +2,9 @@ spring:
   application:
     name: gateway-server
 
+  profiles:
+    active: dev
+
   cloud:
     gateway:
       routes:
@@ -29,6 +32,18 @@ spring:
         username: ${NACOS_USERNAME}
         password: ${NACOS_PASSWORD}
         namespace: 063701af-ad31-403f-bb51-934ddc05118b
+      config:
+        server-addr: 60.204.237.239:8848
+        username: ${NACOS_USERNAME}
+        password: ${NACOS_PASSWORD}
+        file-extension: yaml
+        group: DEFAULT_GROUP
+        namespace: 063701af-ad31-403f-bb51-934ddc05118b
+
+  config:
+    import:
+      - optional:classpath:application-${spring.profiles.active}.yaml # 加载本地配置
+      - optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml # 加载nacos配置 下面的优先级高
 
 server:
   port: 9090
